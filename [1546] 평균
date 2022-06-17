@@ -1,0 +1,12 @@
+import sys
+
+num = int(sys.stdin.readline())
+score = list(map(int, sys.stdin.readline().split()))
+maxNum = max(score)
+    
+newList = []
+for v in score:
+    newList.append(v/maxNum*100)
+
+result = sum(newList)/num
+print(result)
