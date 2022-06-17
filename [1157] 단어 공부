@@ -1,0 +1,26 @@
+import sys
+
+str = sys.stdin.readline()
+
+str = str.upper()
+
+str = str.replace('\n','')
+
+dic = {}
+
+for ch in str:
+    if ch in dic:
+        dic[ch] += 1
+    else:
+        dic[ch] = 1
+    
+max = 0
+result = ""
+for k in dic:
+    if dic[k] > max:
+        max = dic[k]
+        result = k
+    elif dic[k] == max:
+        result = "?"
+
+print(result)
