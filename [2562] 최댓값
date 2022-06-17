@@ -1,0 +1,15 @@
+import sys
+
+input = []
+
+for line in sys.stdin:
+    if line == '\n':
+        break
+    
+    input.append(int(line))
+
+num = max(input)
+result = input.index(num)+1 
+
+print(num)
+print(result)
