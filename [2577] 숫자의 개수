@@ -1,0 +1,29 @@
+import sys
+
+input = []
+
+for line in sys.stdin:
+    if line == '\n':
+        break
+    
+    input.append(int(line))
+
+num = 1
+for val in input:
+    num = num * val
+    
+s = str(num)
+
+dic = {}
+for ch in s:
+    if ch in dic:
+        dic[ch] += 1
+    else:
+        dic[ch] = 1
+        
+for i in range(10):
+    key = str(i)
+    if  key in dic:
+        print(dic[key]) 
+    else:
+        print(0)
