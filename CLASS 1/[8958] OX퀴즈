@@ -1,0 +1,19 @@
+import sys
+
+num = int(input())
+
+for i in range(num):
+    s = sys.stdin.readline()
+    num = 0
+    newNum = 0
+    max = 0;
+    for ch in s:
+        if ch == 'O':
+            max += 1
+            newNum += max
+        else:
+            num += newNum
+            newNum = 0
+            max = 0
+            
+    print(num)

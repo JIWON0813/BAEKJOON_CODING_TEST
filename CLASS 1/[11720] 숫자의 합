@@ -1,0 +1,11 @@
+import sys
+
+sys.stdin.readline()
+
+s = sys.stdin.readline()
+s = s.replace('\n','')
+result = 0
+for ch in s:
+    result += int(ch)
+
+print(result)

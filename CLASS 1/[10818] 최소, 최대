@@ -1,0 +1,7 @@
+import sys
+
+sys.stdin.readline()
+
+input = list(map(int, sys.stdin.readline().split()))
+
+print('{0} {1}'.format(min(input), max(input)))
