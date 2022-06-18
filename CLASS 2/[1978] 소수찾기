@@ -1,0 +1,22 @@
+import sys
+
+input()
+
+input = list(map(int,sys.stdin.readline().split()))
+result = 0;
+
+if 1 in input:
+    input.remove(1)
+
+for i in range(len(input)):
+    num = input[i]
+    check = True
+    for i in range(2,num-1,1):
+        if num%i == 0:
+            check = False
+            break
+        
+    if check:
+        result +=1
+        
+print(result)

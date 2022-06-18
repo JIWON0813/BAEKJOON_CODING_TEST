@@ -1,0 +1,18 @@
+import sys
+
+for line in sys.stdin:
+    line = line.replace('\n','')
+    if line == '0':
+        break
+    
+    check = True
+    for i in range(0,int(len(line)/2),1) :
+        if line[i] != line[len(line)-1-i]:
+            check = False
+            break
+    
+    if check:
+        print("yes")
+    else:
+        print("no")
+        

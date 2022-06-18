@@ -1,0 +1,15 @@
+import sys
+
+num = int(input())
+
+words = set()
+
+for i in range(num):
+    s = sys.stdin.readline().replace('\n','')
+    words.add(s)
+
+word = list(words)
+word.sort()    
+word.sort(key=len)
+
+print("\n".join(word))

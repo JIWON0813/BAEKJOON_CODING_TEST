@@ -1,0 +1,13 @@
+import sys
+
+sys.stdin.readline()
+#단순히 비교대상으로 할때는 set(중복없을때만) set이 확실히 속도가 빠름
+input1 = set(map(int,sys.stdin.readline().split()))
+sys.stdin.readline()
+input2 = list(map(int,sys.stdin.readline().split()))
+
+for val in input2:
+    if val in input1:
+        print(1)
+    else:
+        print(0)

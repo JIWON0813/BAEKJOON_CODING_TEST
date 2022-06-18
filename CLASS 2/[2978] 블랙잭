@@ -1,0 +1,21 @@
+from dataclasses import asdict
+from itertools import combinations
+import sys
+
+num , goal = map(int,input().split())
+
+list = list(map(int, input().split()))
+
+max = 0
+
+list = [value for value in list if value <= goal]
+
+com = combinations(list,3)
+
+result = 0
+for value in com:
+    result = sum(value)
+    if goal >= result and result > max:
+        max = result
+        
+print(max)

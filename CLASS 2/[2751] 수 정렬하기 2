@@ -1,0 +1,16 @@
+import sys
+
+list = []
+
+num = int(input())
+
+for i in range(num):
+    #변수 형변환으로 시간초과 변수 재사용 최대한 피할 것
+    line = sys.stdin.readline()
+    
+    num = int(line.replace('\n',''))
+    list.append(num)
+        
+list.sort()
+for val in list:
+    print(val)

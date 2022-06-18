@@ -1,0 +1,13 @@
+import sys
+
+
+x, y = map(int,input().split())
+
+
+b = []
+for i in range(x):
+    line = sys.stdin.readline().replace('\n','')
+    b.append([value for value in line])
+    
+# for i in range(y-8):
+    
