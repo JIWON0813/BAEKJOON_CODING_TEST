@@ -1,0 +1,15 @@
+from collections import deque
+import sys
+
+num = int(input())
+
+list = [val+1 for val in range(num)]
+card = deque(range(1,num+1))
+
+#list -> deque로 구현하니 시간초과 안뜸 시간효과 deque > list
+while len(card)>1:
+    card.remove(card[0])
+    c=card.popleft()
+    card.append(c)
+
+print(card[0])
