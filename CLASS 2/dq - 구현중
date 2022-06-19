@@ -1,0 +1,31 @@
+from collections import deque
+import sys
+
+
+num = int(input())
+
+dq = deque()
+for i in range(num):
+    line = sys.stdin.readline()
+    line.replace('\n','')
+    if 'push' in line:
+        com , num = map(str,sys.stdin.readline().split())
+    else:
+        com  = line
+    
+    if com == 'push_back':
+        dq.append(int(num))
+    elif com == 'push_front':
+        dq.appendleft(int(num))
+    elif com == 'pop_front':
+        if len(dq) == 0:
+            print(-1)
+        else:
+            print(dq.popleft())
+    elif com == 'pop_back':
+        if len(dq) == 0:
+            print(-1)
+        else:
+            print(dq.pop())
+    elif com == 'front':
+        dq[-1]
