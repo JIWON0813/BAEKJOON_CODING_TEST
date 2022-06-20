@@ -1,0 +1,14 @@
+from ntpath import join
+import sys
+
+n , k = map(int, input().split())
+
+numList = list(map(int, input().split()))
+
+result = []
+
+for val in numList:
+    if(val < k):
+        result.append(val)
+
+print(' '.join(map(str,result)))
