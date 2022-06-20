@@ -1,0 +1,17 @@
+import sys
+
+x, y , w , h = map(int,sys.stdin.readline().split())
+
+min = 1001
+
+
+if w-x < min:
+    min = w-x
+if x < min:
+    min = x
+if h-y < min:
+    min = h-y
+if y < min:
+    min = y
+
+print(min)

@@ -1,0 +1,20 @@
+import sys
+
+input()
+
+s = str(input())
+
+numList = []
+
+for val in s:
+    numList.append(ord(val) - ord('a') + 1)
+
+z = 0
+result = 0
+M = 1234567891
+for num in numList:
+    result += (num * (31**z))
+    z += 1
+
+result = result%M
+print(result)

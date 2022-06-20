@@ -1,0 +1,13 @@
+import sys
+
+num = int(input())
+
+result = []
+for i in range(num):
+    val = list(map(str,sys.stdin.readline().split()))
+    result.append([int(val[0]),val[1],i])
+    
+result.sort(key=lambda x:(x[0],x[2]))
+
+for val in result:
+    print('{0} {1}'.format(val[0],val[1]))

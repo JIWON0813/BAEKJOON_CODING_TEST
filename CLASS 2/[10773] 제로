@@ -1,0 +1,14 @@
+import sys
+
+num = int(input())
+
+stack = []
+
+for i in range(num):
+    val = int(input())
+    if val == 0:
+        stack.pop()
+    else:
+        stack.append(val)
+
+print(sum(stack))
