@@ -1,0 +1,16 @@
+import sys
+
+n = int(input())
+
+dic = {}
+for _ in range(n):
+    num = int(sys.stdin.readline().replace('\n',''))
+    if num in dic:
+        dic[num] += 1
+    else:
+        dic[num] = 1
+
+temp = sorted(dic.keys())
+for val in temp:
+    for i in range(dic[val]):
+        print(val)
