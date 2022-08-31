@@ -1,0 +1,19 @@
+#프로젝트에 필요한 기업이 원하는 스킬셋 데이터 가져오는 로직
+
+
+import requests
+
+
+skillset = set()
+
+for i in range(1,500,1):
+    page = requests.get("https://api.codenary.co.kr/company/detail/{0}".format(i))
+    if "404" in page.text:
+        continue
+    
+    jsonResult = page.json()
+
+    for data in jsonResult['techstack']:
+        skillset.add(data['name'])
+
+print(skillset)
