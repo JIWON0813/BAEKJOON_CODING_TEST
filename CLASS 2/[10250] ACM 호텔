@@ -1,10 +1,3 @@
-import math
-import os
-import random
-import re
-import json
-import requests
-
 import sys
 
 num = int(input())
@@ -27,4 +20,3 @@ for _ in range(num):
             sri = str(ri)
 
         print(sl+sri)
-
