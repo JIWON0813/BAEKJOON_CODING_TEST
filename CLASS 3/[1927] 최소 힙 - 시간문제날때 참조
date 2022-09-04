@@ -1,9 +1,3 @@
-import math
-import os
-import random
-import json
-import requests
-
 import sys
 import re
 import heapq
@@ -11,7 +5,7 @@ import heapq
 get = int(input())
 heap = []
 for _ in range(get):
-    val = int(input())
+    val = int(sys.stdin.readline()) # 시간체크하는건 input 조심
 
     if val == 0:
         if len(heap) == 0:
@@ -20,5 +14,3 @@ for _ in range(get):
             print(heapq.heappop(heap))
     else:
         heapq.heappush(heap, val)
-
-    
