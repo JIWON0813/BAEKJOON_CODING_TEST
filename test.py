@@ -1,30 +1,18 @@
 import math
 import os
 import random
-import re
 import json
 import requests
 
 import sys
+import re
 
-num = int(input())
-result = []
-for _ in range(num):
-    a , b , c = map(int, input().split())
+n = 19
 
-    if c%a == 0:
-        if c//a > 9:
-            print(str(a)+str(c//a))
-        else:
-            print(str(a)+'0'+str(c//a))                
-    else:
-        ri = (c//a) +1
-        sl = str(c%a)
-        sri = ''
-        if ri < 10:
-            sri = '0'+str(ri)
-        else:
-            sri = str(ri)
+x = 1
+cnt = 1
+while n > x:
+    x += cnt*6
+    cnt += 1
 
-        print(sl+sri)
-
+print(cnt)

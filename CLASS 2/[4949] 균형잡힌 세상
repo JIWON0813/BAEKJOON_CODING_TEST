@@ -1,0 +1,33 @@
+import sys
+import re
+
+while True:
+    s = input()
+    if s == '.':
+        break
+
+    s = re.sub('[a-zA-Z]', "", s)
+    s = s.replace(" ", "")
+    
+    st = []
+    for val in s:
+        if val == '[' or val == '(':
+            st.append(val)
+        elif val == '.':
+            break
+        else:
+            if len(st) == 0:
+                st.append(val)
+                break
+
+            if val == ']' and st[-1] == '[':
+                st.pop()
+            elif val == ')' and st[-1] == '(':
+                st.pop()
+            else:
+                st.append(val)
+
+    if len(st) > 0:
+        print("no")
+    else:
+        print("yes")
